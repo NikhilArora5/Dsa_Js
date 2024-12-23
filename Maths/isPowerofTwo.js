@@ -1,7 +1,7 @@
 /** Solution 1  Runtime 71 ms
  * Edge cases
  * If n==1 2(0)=1 then 1 is the output number for 1 outout we have x=0 2(0)=1
- * If n=0   0 is the output so FALSE no x 2(x) can give 0
+ * If n=0   0 is the output so FALSE no value of  x 2(x) can give 0
  *
  * Time complexity O(n)
  */
@@ -33,10 +33,9 @@ var isPowerOfTwo = function (n) {
 
 // console.log("isPowerofTwoResult",isPowerofTwoResult)
 
-/** Solution 2  Runtime= ms
- * Edge cases
- *
- *
+
+/** Solution 2  Runtime= 1 ms
+ * Edge cases if (n <= 0) return false;
  *
  * MAIN CONCEPT: using Bitwise operator
  *  In binary if the number is power of two then for the number n
