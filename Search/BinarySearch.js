@@ -1,4 +1,32 @@
-const binarySearch = (n) => {
+function binarySearch(arr, target)  {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+      let mid = Math.floor((left + right) / 2);
+
+      if (arr[mid] === target) {
+          return mid; // Target found
+      } else if (arr[mid] < target) {
+          left = mid + 1; // Search right half
+      } else {
+          right = mid - 1; // Search left half
+      }
+  }
+  
+  return -1; // Target not found
+}
+
+// Example usage:
+const numbers = [1, 3, 5, 7, 9, 11, 15];
+console.log(binarySearch(numbers, 7)); // Output: 3
+console.log(binarySearch(numbers, 10)); // Output: -1
+
+
+
+
+
+const binarySearchManual = (n) => {
   const array = [-1,0,3,5,9,12]
   let l = 0;
   let h = array.length - 1;
@@ -35,3 +63,7 @@ const binarySearch = (n) => {
   return -1;
 };
 binarySearch(2);
+
+
+
+
