@@ -11,7 +11,7 @@
  * FromCharCode(Ascci value)  gives the character
  * CharCOdeAt(character) gives Ascii value
  * a>A true as small case has higjer Ascci values
- * Given the conditions bewl special character don get into tat range
+ * Given the conditions be special character don't get into that range.
  * 
  */
 
