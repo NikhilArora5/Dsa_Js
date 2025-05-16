@@ -139,4 +139,8 @@ const findLongestWord = (sentence) => {
 }
   console.log(longestWord);
 };
-findLongestWord("Hi Iam Saikrishna Iam a UI Developer");
+// findLongestWord("Hi Iam Saikrishna Iam a UI Developer");
+
+// console.log(string.concat(" "*5))
+console.log(" ".repeat(5).concat("hello"));
+
