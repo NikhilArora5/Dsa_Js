@@ -1,0 +1,5 @@
+
+WHILE LOOP
+1.used in sumOfDigits
+2.used in Reverse a number reverseIntegr.js
+3. strong number
