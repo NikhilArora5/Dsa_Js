@@ -83,6 +83,24 @@ let k=2
    }
 
 
+
+
+   
+
+   // Try this clean reverArrTwoPointer approach 
+   const reverArrTwoPointer = (arr) => {
+  let i = 0;
+  let j = arr.length - 1;
+
+  while (i < j) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+
+    i += 1;
+    j += -1;
+  }
+
+  console.log("reversed Arr", arr);
+};
    const reverserArr=(arr,startIdx,endIdx)=>{
       let n=endIdx-startIdx+1
       let low=startIdx
