@@ -6,7 +6,7 @@
  * 
  * ('a'.charCodeAt(0) - 'A'.charCodeAt(0)) gives +32
  * ('A'.charCodeAt(0) - 'a'.charCodeAt(0)) gives -32
- *  so thers is a differenc eof 32 for a to be converted to A
+ * so thers is a differenc eof 32 for a to be converted to A
  * we can directly use uppercase and lower case as well
  * FromCharCode(Ascci value)  gives the character
  * CharCOdeAt(character) gives Ascii value
