@@ -121,13 +121,11 @@ const str = "nikhil   arora";
 const titleCaseGpt = (str) => {
   return str
     .split(" ") // Split by spaces
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
     .join(" "); // Join back into a string
 };
 
 // console.log(titleCaseGpt(str));
-
-
 
 const findLongestWord = (sentence) => {
   let wordsArray = sentence.split(" ");
@@ -136,7 +134,7 @@ const findLongestWord = (sentence) => {
     if (wordsArray[i].length > longestWord.length) {
       longestWord = wordsArray[i];
     }
-}
+  }
   console.log(longestWord);
 };
 // findLongestWord("Hi Iam Saikrishna Iam a UI Developer");
@@ -144,3 +142,80 @@ const findLongestWord = (sentence) => {
 // console.log(string.concat(" "*5))
 console.log(" ".repeat(5).concat("hello"));
 
+const remDuplicate = (arr) => {
+  let k = 1;
+  let n = arr.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    if (arr[i] != arr[i + 1]) {
+      arr[k] = arr[i + 1];
+      k++;
+    }
+  }
+  return arr;
+};
+
+const num2 = [0, 1, 0, 1, 0, 1, 99];
+const singleNumber = (arr) => {
+  let check = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    check = arr[i] ^ check;
+  }
+
+  return check;
+};
+
+// 4=100
+// 2=010
+// 1=001
+
+// i=0
+// 101=6
+// check=101
+
+// i=2
+// check=111
+
+//i=3
+//110
+
+//i=4
+// 100
+
+// 1.Need ot compare two arrays and check if the leemsnts of arr 1 has their square in arr 2
+// 2.Order does not matter but frequency does matters
+let isArrayHasSquaredValue = () => {
+  const arr1 = [1, 1, 2];
+  const arr2 = [1, 4, 4];
+
+  //expected result of above false as the expected is [1,1,4] arr1 has two ones so two times square shoudl be available
+
+  // 1.input => two arrays
+  // 2.Logic => array comparison
+  //  -Create a object/hashmap of the count of elemns in arr2 to track how many are available
+  //  -loop through arr1 check if its square is present
+  //  -if present decrement the count to chekc for the same nexrt element in arr1 just as the above case
+  //  -if not return false
+  //3.output=>boolean
+
+  const hashmap = {};
+
+  for (i of arr2) {
+    console.log("i=>", i);
+    hashmap[i] = hashmap[i] ? hashmap[i] + 1 : 1;
+  }
+
+  for (j of arr1) {
+    let square = j * j;
+
+    if (hashmap[square] >= 1) {
+      hashmap[square] += -1;
+    } else {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log(isArrayHasSquaredValue());
