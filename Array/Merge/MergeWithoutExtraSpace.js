@@ -28,6 +28,8 @@ var mergeOptimised = function (nums1, m, nums2, n) {
   let i = m - 1;
   let j = n - 1;
 
+  //we are updatingt he nums1 here and making it the final sorted array
+
   // Merge from the end of both arrays
   while (i >= 0 && j >= 0) {
     if (nums1[i] >= nums2[j]) {
