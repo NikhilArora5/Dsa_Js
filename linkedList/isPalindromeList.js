@@ -58,6 +58,13 @@ function isPalindrome(head) {
     slow = next;
   }
 
+  //
+  // now prev is the head of reversed second half list
+  // and head is the head of first half list
+  // we can compare these two lists now
+
+  //1 -> 2 -> 3 -> 3 -> 2 -> 1; original list
+  //3 - 2 - 1 -> null; reversed second half list so we start from prev which is 3 and loop till we reach null
   // very imp as how to compare and use at last after reversal
   //only run till our reversed list does not become null and check if these are equal to the frst hald list
   while (prev) {

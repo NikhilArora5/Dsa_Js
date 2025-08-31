@@ -3,6 +3,34 @@
  * Output: true
  */
 
+var isAnagram = function(s, t) {
+      if (s.length !== t.length) return false;
+  
+      let map = {};
+  
+      //creat cut hashmap of one
+      for (let i = 0; i < s.length; i++) {
+          if (!map[s[i]]) {
+              map[s[i]] = 1;
+          } else {
+              ++map[s[i]];
+          }
+      }
+  
+
+      //then check the cout of senond one iwht hashmap
+      for (let i = 0; i < t.length; i++) {
+          if (!map[t[i]] || map[t[i]] === 0) {
+              return false;
+          } else {
+            //keep decrmenting cout when a key is doun in map
+              --map[t[i]];
+          }
+      }
+  
+      return true;
+  };
+
 
 
 

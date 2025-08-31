@@ -1,3 +1,21 @@
+
+
+//constant extra space
+//Tm
+var numJewelsInStones = function(jewels, stones) {
+    let count = 0;
+    for (let i = 0; i < stones.length; i++) {
+        for (let j = 0; j < jewels.length; j++) {
+            if (jewels[j] === stones[i]) {
+                ++count;
+                break;
+            }
+        }
+    }
+    return count;
+};
+
+//usiing hash map
 var numJewelsInStones = function (jewels, stones) {
   const hash = new Map();
   let count = 0;

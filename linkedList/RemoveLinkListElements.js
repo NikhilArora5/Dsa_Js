@@ -17,6 +17,23 @@ list.addAtTail(4);
 list.addAtTail(5);
 
 printList(list);
+// function to remove elements with value 'val' from the linked list
+// using a sentinel node to simplify edge cases
+// this approach avoids the need to handle the head separately
+// it uses a dummy node that points to the head of the list
+// this way we can always return dummy.next as the new head
+var removeElements = function(head, val) {
+    let sentinel = new ListNode(0, head);
+    let current = sentinel;
+    while (current && current.next) {
+        if (current.next.val === val) {
+            current.next = current.next.next;
+        } else {
+            current = current.next;
+        }
+    }
+    return sentinel.next;
+};
 var removeElements = function (head, val) {
   let prev = null;
   let curr = head;

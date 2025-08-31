@@ -1,0 +1,16 @@
+#stack standard opeartions
+-push ,pop , top/peek-stack[n-1] as top , isEmpty to return if stack empty or not
+
+#using two ques
+-operations : push (enqueue) , Q[0] peek/frontend , Q.shift() to remove first out
+
+#Logic used
+1.push is same
+2.pop => we have two queues q1 and q2 so and one time one will be main queue and other will be a temp
+-so what we will do is from the mai queu we will do Q.shift() and will enqueue(push) it to the temp queues
+-we will do this for n-1 times and now the main queu will have only the last element and for last element
+-we will do Q.shift() but will not enqueue/push to the temp queue
+-IMP aft this we will shift the Queues temp will become main queue and main will become temp
+
+3.top/seek=>same as pop just at the end we push the last as well
+

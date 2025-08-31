@@ -32,7 +32,7 @@ var addTwoNumbersWorking = function (l1, l2) {
     const newNode = sum > 9 ? sum % 10 : sum;
 
     carry=Math.floor(sum/10)
-    console.log("data=>", { carry, a, b, sum,node });
+    
     l1 = l1?.next;
     l2 = l2?.next;
     curr.next=newNode

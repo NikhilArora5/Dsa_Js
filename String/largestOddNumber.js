@@ -3,8 +3,8 @@
 /**
  * 1.We need to return the largest odd substring
  * 2. We start from the last reverse loop the string
- * 3. and check each char num[i]%2 whther odd or even if even we got the longest susbstring
- * 4. we return the susbstring where we oun that odd number/char
+ * 3. and check each char num[i]%2 whther odd or even ,if odd we got the longest susbstring
+ * 4. we return the susbstring where we found that odd number/char
  * 5. TIME : O(n)
  * 6. SPACE :O(1)
  *  
