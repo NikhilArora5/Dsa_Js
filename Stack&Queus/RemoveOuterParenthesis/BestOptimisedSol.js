@@ -1,4 +1,23 @@
-// 1.-----------------CONSTANT SPACE------------
+// 1.-----------------CONSTANT SPACE------------ TWO SOLTUIONS
+
+//SIMPLER ONE
+var removeOuterParentheses = function(s) {
+    let level = 0;   // Tracks nesting depth
+    let ans = "";
+
+    for (const char of s) {
+        if (char === "(") {
+            level++;                 // Increase depth first
+            if (level > 1) ans += char; // Add only if nested
+        } else {
+            if (level > 1) ans += char; // Add only if nested
+            level--;                 // Decrease depth after
+        }
+    }
+
+    return ans;
+};
+
 var removeOuterParentheses = function(s) {
     let level = 0;   // Tracks how deep we are inside parentheses
     let ans = "";
